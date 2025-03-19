@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "articles#index"
 
-  get "/articles", to: "articles#index"
-  get "/articles/:id", to: "articles#show"  # * READ
+  # get "/articles", to: "articles#index"
+  # get "/articles/:id", to: "articles#show"  # * READ
+  # * Instead of the above, Rails provides a routes method named resources that maps all of the conventional (CRUD) routes for a collection of resources, such as articles.
+  resources :articles
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
