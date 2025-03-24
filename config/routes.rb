@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   # get "/articles", to: "articles#index"
   # get "/articles/:id", to: "articles#show"  # * READ
   # * Instead of the above, Rails provides a routes method named resources that maps all of the conventional (CRUD) routes for a collection of resources, such as articles.
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
